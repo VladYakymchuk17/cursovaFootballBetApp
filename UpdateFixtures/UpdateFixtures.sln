@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpdateFixtures", "UpdateFixtures.csproj", "{4B9BF578-090E-49DF-90ED-9C7DB9EEBC2B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4B9BF578-090E-49DF-90ED-9C7DB9EEBC2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B9BF578-090E-49DF-90ED-9C7DB9EEBC2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B9BF578-090E-49DF-90ED-9C7DB9EEBC2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B9BF578-090E-49DF-90ED-9C7DB9EEBC2B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {00673D19-1B52-492B-8EBD-A63FDC33D8F1}
+	EndGlobalSection
+EndGlobal
