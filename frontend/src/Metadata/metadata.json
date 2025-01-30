@@ -1,0 +1,561 @@
+{
+    "dimensions": [
+        {
+            "name": "game",
+            "label": "Game",
+            "description": "Information about the football game",
+            "levels": [
+                {
+                    "name": "League",
+                    "label": "league",
+                    "description": "Information about the league where game was played", 
+                    "levels": [
+                    {
+                        "name": "Season",
+                        "label": "season",
+                        "description": "year when league games began(values from 2010 - 2023)",
+                        "dataType":"integer"
+                        
+                    }, 
+                    {
+                        "name": "Round",
+                        "label": "round",
+                        "description": "count of  how many times have every team played",
+                        "dataType":"string"
+                        
+                    }
+                ]
+                },
+                {
+                    "name": "Venue",
+                    "label": "venue",
+                    "attributes":[
+                    {
+                        "name": "City",
+                        "label": "city",
+                        "description": "Name of city",
+                        "dataType":"string"
+                        
+                    }, 
+                    {
+                        "name": "Name",
+                        "label": "name",
+                        "description": "Name of the stadium",
+                        "dataType":"string"
+                        
+                    }]
+                }
+
+
+
+            ]
+            
+        },
+        {
+            "name": "League",
+            "label": "league",
+            "description": "Information about the league where game was played", 
+            "levels": [
+                {
+                    "name": "Season",
+                    "label": "season",
+                    "description": "year when games began(values from 2010 - 2023)",
+                    "dataType":"integer"
+                    
+                }, 
+                {
+                    "name": "Round",
+                    "label": "round",
+                    "description": "count of  how many times have every team played",
+                    "dataType":"string"
+                    
+                }
+            ],
+            "hierarchies": [
+                {
+                    "name": "per_round",
+                    "label": "PerRound",
+                    "levels": [
+                        "season",
+                        "round"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Venue",
+            "label": "venue",
+            "description": "Place where game is played", 
+            "levels": [
+                {
+                "name": "Venue",
+                "label": "venue",
+                "attributes":[
+                {
+                    "name": "City",
+                    "label": "city",
+                    "description": "Name of city",
+                    "dataType":"string"
+                    
+                }, 
+                {
+                    "name": "Name",
+                    "label": "name",
+                    "description": "Name of the stadium",
+                    "dataType":"string"
+                    
+                }]
+            }
+            ]
+        },
+        {
+            "name": "date",
+            "label": "Date",
+            "description": "Information about date of game",
+            "levels": [
+                {
+                    "name": "day",
+                    "label": "Day",
+                    "description": "Full value of date",
+                    "dataType": "day"
+                },
+                {
+                    "name": "year",
+                    "label": "Year",
+                    "description": "Year",
+                    "dataType": "integer"
+                },
+                {
+                    "name": "month",
+                    "label": "Month",
+                    "description": "Number of month between 1-12",
+                    "dataType": "integer"
+                },
+                {
+                    "name": "day_of_week",
+                    "label": "DayOfWeek",
+                    "description": "Name of a day of a week between Mon-Sun",
+                    "dataType": "string"
+                }
+            ],
+            "hierarchies": [
+                {
+                    "name": "monthly",
+                    "label": "Monthly",
+                    "levels": [
+                        "year",
+                        "month"
+                    ]
+                },
+                {
+                    "name": "daily",
+                    "label": "Daily",
+                    "levels": [
+                        "year",
+                        "month",
+                        "week",
+                        "day_of_week"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Player",
+            "label": "player",
+            "description": "The information about a player that participated in the game", 
+            "levels": [
+                {
+                    "name": "Player",
+                    "label": "player",
+                    "attributes": [
+                        {
+                            "name": "ID",
+                            "description": "Identifier of  player",
+                            "dataType": "integer"
+                        },
+                        {
+                            "name": "First_Name",
+                            "description": "First name",
+                            "dataType": "string"
+                        },
+                        {
+                            "name": "Last_Name",
+                            "description": "Last name",
+                            "dataType": "string"
+                        },
+                        {
+                            "name": "Age",
+                            "description": "Age",
+                            "dataType": "integer"
+                        },
+                        {
+                            "name": "Nationality",
+                            "description": "Nationality",
+                            "dataType": "string"
+                        }
+                    ]
+                    
+                }
+            ]
+        },
+        {
+            "name": "Result",
+            "label": "result",
+            "description": "the result how game has ended", 
+            "levels": [
+                {
+                    "name": "Name",
+                    "label": "name",
+                    "description": "Name of result that can be only: Home win, Away win or Draw",
+                    "dataType":"string"
+                    
+                }, 
+                {
+                    "name": "Score",
+                    "label": "score",
+                    "description": "More concrete result of game: 1-0,0-0, 3-0, 2-1",
+                    "dataType":"string"
+                    
+                }
+            ],
+            "hierarchies": [
+                {
+                    "name": "per_score",
+                    "label": "PerScore",
+                    "levels": [
+                        "name",
+                        "score"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "period",
+            "label": "Period",
+            "description": "The halftime of game", 
+            "levels": [
+                {
+                    "name": "period",
+                    "label": "Period",
+                    "attributes": [
+                        {
+                            "name": "ID",
+                            "description": "Identifier of period",
+                            "dataType": "integer"
+                        },
+                        {
+                            "name": "Period_number",
+                            "description": "Number of period between 1-4",
+                            "dataType": "integer"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Location",
+            "label": "location",
+            "description": "Location of a team", 
+            "levels": [
+                {
+                    "name": "Country",
+                    "label": "country",
+                    "description": "Country of a team",
+                    "dataType":"string"
+                    
+                }, 
+                {
+                    "name": "State",
+                    "label": "state",
+                    "description": "State",
+                    "dataType":"string"
+                    
+                },
+                {
+                    "name": "City",
+                    "label": "city",
+                    "description": "City",
+                    "dataType":"string"
+                    
+                }
+            ],
+            "hierarchies": [
+                {
+                    "name": "per_city",
+                    "label": "PerCity",
+                    "levels": [
+                        "country",
+                        "state",
+                        "city"
+                    ]
+                },
+                {
+                    "name": "per_state",
+                    "label": "PerState",
+                    "levels": [
+                        "country",
+                        "state"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "team",
+            "label": "Team",
+            "description": "Information about the football team",
+            "levels": [
+                {
+                    "name": "Location",
+                    "label": "location",
+                    "description": "Location of a team", 
+                    "levels": [
+                        {
+                            "name": "Country",
+                            "label": "country",
+                            "description": "Country of a team",
+                            "dataType":"string"
+                            
+                        }, 
+                        {
+                            "name": "State",
+                            "label": "state",
+                            "description": "State",
+                            "dataType":"string"
+                            
+                        },
+                        {
+                            "name": "City",
+                            "label": "city",
+                            "description": "City",
+                            "dataType":"string"
+                            
+                        }
+                    ]
+                },
+                {
+                    "name": "Player",
+                    "label": "player",
+                    "description": "The information about a player that participated in the game", 
+                    "levels": [
+                        {
+                            "name": "Player",
+                            "label": "player",
+                            "attributes": [
+                                {
+                                    "name": "ID",
+                                    "description": "Identifier of  player",
+                                    "dataType": "integer"
+                                },
+                                {
+                                    "name": "First_Name",
+                                    "description": "First name",
+                                    "dataType": "string"
+                                },
+                                {
+                                    "name": "Last_Name",
+                                    "description": "Last name",
+                                    "dataType": "string"
+                                },
+                                {
+                                    "name": "Age",
+                                    "description": "Age",
+                                    "dataType": "integer"
+                                },
+                                {
+                                    "name": "Nationality",
+                                    "description": "Nationality",
+                                    "dataType": "string"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+            
+        }
+
+
+
+
+    ],
+    "cubes": [
+        {
+            "name": "gameResult",
+            "label": "FactGameRes",
+            "description": "Information of the game result",
+            "dimensions": [
+                "game",
+                "date",
+                "period",
+                "team"
+            ],
+            "measures": [
+                {
+                    "name": "assists",
+                    "aggregations": [ "sum","max" ,"min","avg"],
+                    "description": "Number of passes that has been before goal",
+                    "dataType": "integer"
+                },
+                {
+                    "name": "goals",
+                    "aggregations": [ "sum","max" ,"min","avg" ],
+                    "description": " Number of goals(in football when team score in other team net)",
+                    "dataType": "integer"
+                },
+                {
+                    "name": "fouls",
+                    "aggregations": ["sum","max" ,"min","avg" ],
+                    "description": "Numeber of violation",
+                    "dataType": "integer"
+                },
+                {
+                    "name": "yellow_cards",
+                    "aggregations": ["sum","max" ,"min","avg" ],
+                    "description": "Number of yellow cards that was given ",
+                    "dataType": "integer"
+                },
+                {
+                    "name": "red_cards",
+                    "aggregations": [ "sum","max" ,"min","avg" ],
+                    "description": "Number of red cards that was given",
+                    "dataType": "integer"
+                },
+                {
+                    "name": "substitutions",
+                    "aggregations": [ "sum","max" ,"min","avg" ],
+                    "description": "Number of substitutions that were made",
+                    "dataType": "integer"
+                }
+            ],
+            "joins": [
+                {
+                    "master": "FactGameRes.game_id",
+                    "detail": "game.id"
+                },
+                {
+                    "master": "FactGameRes.date_id",
+                    "detail": "date.id"
+                },
+                {
+                    "master": "FactGameRes.team_id",
+                    "detail": "team.id"
+                },
+                {
+                    "master": "FactGameRes.period_id",
+                    "detail": "period.id"
+                }
+            ]
+        },
+        {
+            "name": "playerRes",
+            "label": "FactPlayer",
+            "description": "Інформація про транзакції купівлі товарів",
+            "dimensions": [
+                "player",
+                "date",
+                "team",
+                "game"
+            ],
+            "measures": [
+                {
+                    "name": "assists",
+                    "aggregations": [ "sum","max" ,"min","avg"],
+                    "description": "Number of passes that has been before goal",
+                    "dataType": "integer"
+                },
+                {
+                    "name": "goals",
+                    "aggregations": [ "sum","max" ,"min","avg" ],
+                    "description": " Number of goals(in football when team score in other team net)",
+                    "dataType": "integer"
+                },
+                {
+                    "name": "fouls",
+                    "aggregations": ["sum","max" ,"min","avg" ],
+                    "description": "Numeber of violation",
+                    "dataType": "integer"
+                },
+                {
+                    "name": "substitutions",
+                    "aggregations": [ "sum","max" ,"min","avg" ],
+                    "description": "Number of substitutions that were made",
+                    "dataType": "integer"
+                }
+            ],
+            "joins": [
+                {
+                    "master": "FactPlayer.game_id",
+                    "detail": "game.id"
+                },
+                {
+                    "master": "FactPlayer.date_id",
+                    "detail": "date.id"
+                },
+                {
+                    "master": "FactPlayer.team_id",
+                    "detail": "team.id"
+                },
+                {
+                    "master": "FactPlayer.player_id",
+                    "detail": "player.id"
+                }
+            ]
+        },
+        {
+            "name": "Revenue",
+            "label": "FactRevenue",
+            "description": "Інформація про відвідини сайту користувачами",
+            "dimensions": [
+                "date",
+                "game",
+                "result"
+            ],
+            "measures": [
+                {
+                    "name": "number_of_bets",
+                    "aggregations": [ "sum", "avg", "max","min" ],
+                    "description": "Number of bets that were made",
+                    "dataType": "integer"
+                },
+                {
+                    "name": "bet_income",
+                    "aggregations": [ "sum", "avg", "max", "min" ],
+                    "description": "Amount of mone that was put on bets",
+                    "dataType": "integer"
+                },
+                {
+                    "name": "bet_outcome",
+                    "aggregations": [ "sum", "avg", "max", "min"],
+                    "description": "Amount of money that can be won",
+                    "dataType": "integer"
+                },
+                {
+                    "name": "bet_result",
+                    "aggregations": [ "avg" ],
+                    "description": "Result of a bet(True/False - 1/0)",
+                    "dataType": "integer"
+                },
+                {
+                    "name": "bet_coef",
+                    "aggregations": [ "max","min" ],
+                    "description": "Number tat calculated by dividing bet_outcome on bet_income",
+                    "dataType": "integer"
+                }
+            ],
+            "joins": [
+                {
+                    "master": "FactRevenue.game_id",
+                    "detail": "game.id"
+                },
+                {
+                    "master": "FactRevenue.date_id",
+                    "detail": "date.id"
+                },
+                {
+                    "master": "FactRevenue.result_id",
+                    "detail": "result.id"
+                }
+            ]
+        }
+    ]
+}
