@@ -1,2 +1,2 @@
 # cursovaFootballBetApp
-university project that include react app, etl processes and webapi app. Main theme is football-bet-app
+university project that includes react app, etl processes and webapi app. Main topic is football-bet-app
