@@ -1,0 +1,49 @@
+body {
+  background-color: #f8f9fa; /* Default background color */
+}
+
+.bets-container {
+  margin-top: 0px;
+  background-color: #f8f9fa; /* Default background color */
+}
+
+.bets-grid {
+  background-color: #f8f9fa; /* Default background color */
+}
+
+.bet-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #fff; /* Default background color */
+  border-radius: 8px;
+}
+
+.team {
+  display: flex;
+  align-items: center; /* Adjust the height as needed */
+  overflow: hidden; /* Hide overflowing content */
+  height: 85px !important;
+}
+
+.team img {
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.bet-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.option {
+  margin-top: 10px;
+  background-color: #fff; /* Default background color */
+}
+
+.info {
+  margin-top: 5px;
+}

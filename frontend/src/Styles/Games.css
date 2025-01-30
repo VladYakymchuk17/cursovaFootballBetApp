@@ -1,0 +1,67 @@
+.matches-container {
+  padding: 20px;
+  background-color: #f8f9fa; /* Default background color */
+}
+
+.matches-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.match-card {
+  background-color: #fff; /* Default background color */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  font-size: 20px;
+  text-decoration: none; /* Remove underline */
+  color: black; 
+}
+
+.match-card:hover {
+  transform: translateY(-5px);
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  width: 140px;
+}
+
+.team img {
+  width: 35px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.versus {
+  margin: 0 10px;
+}
+
+.match-info {
+  margin-top: 15px;
+}
+
+.info-item {
+  margin-bottom: 5px;
+}
+
+
+.filter-btn {
+  height: 70px;
+  width: 150px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  background-color: #0056b3;
+}
