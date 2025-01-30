@@ -1,0 +1,118 @@
+.bet-form-container {
+  margin-top: 5px;
+  background-color: #f8f9fa; /* Default background color */
+}
+
+.bet-options-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.bet-option {
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 250px;
+  background-color: #fff; /* Default background color */
+  font-size: 20px;
+}
+
+.match-details {
+  margin-bottom: 15px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input{
+  background-color: #fff; /* Default background color */
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+.input-group input {
+  flex: 1;
+}
+
+.btn-submit {
+  background-color: #007bff; /* Default button color */
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+.add-bet-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 300px;
+  margin: auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-submit {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-cancel {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+button:hover {
+  filter: brightness(0.9);
+}
+
+.addBet-btn {
+  margin-top: 20px;
+  height: 80px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.addBet-btn:hover {
+  background-color: #0056b3;
+}
